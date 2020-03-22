@@ -3,7 +3,8 @@
 News is a sample iOS app written in Swift that uses news information from newsapi.org to display new about various subjects. It uses a tableview with an async imageview for the cells. It is layed out using constraints programatically. And has a nice dropdown menu.
 
 
-|![Screenshot](Screenshot.png)      |![Screenshot](Screenshot2.png)
+<img src="Screenshot.png" style="margin-right: 60px;">
+<img src="Screenshot2.png">
 
 
 
