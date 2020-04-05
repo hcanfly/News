@@ -8,12 +8,11 @@
 
 import UIKit
 
-// imageView class that uses simple caching. caching is great for something like a tableview
-// where images should be small and can be re-used a lot
-// real world version would need better caching
+// AsyncCachedImageView is really good for things like table views
+
 final class AsyncCachedImageView: UIImageView {
     //static let placeHolderImage = UIImage(named: "Loading")   // not using placeholder image
-    static var cachedImages = [String: UIImage]()
+    static let cachedImages = NSCache<NSString, UIImage>()
 
     init(frame: CGRect, urlString: String?) {
         super.init(frame: frame)
@@ -40,7 +39,7 @@ final class AsyncCachedImageView: UIImageView {
             return
         }
 
-        if let image = AsyncCachedImageView.cachedImages[urlString] {
+        if let image = AsyncCachedImageView.cachedImages.object(forKey: urlString as NSString) {
             //print("using cached image")
             DispatchQueue.main.async {
                 self.image = image
@@ -54,7 +53,7 @@ final class AsyncCachedImageView: UIImageView {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self.image = image
-                        AsyncCachedImageView.cachedImages[urlString] = image
+                        AsyncCachedImageView.cachedImages.setObject(image, forKey: urlString as NSString)
                     }
                 }
                 return

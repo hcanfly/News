@@ -86,8 +86,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UINavigati
 
         cell.headlineText = headlines[indexPath.row].title
 
-        if let urlString = headlines[indexPath.row].urlToImage, let url = URL(string: urlString) {
-            //cell.cellImageView.loadImage(at: url)
+        if let urlString = headlines[indexPath.row].urlToImage {
             cell.cellImageView.downloadImage(urlString: urlString)
             cell.clipsToBounds = true
         }
