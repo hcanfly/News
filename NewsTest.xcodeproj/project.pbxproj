@@ -82,16 +82,16 @@
 			children = (
 				4EA6A06E2410BB390063C21B /* AppDelegate.swift */,
 				4EA6A0722410BB390063C21B /* ViewController.swift */,
+				3E199FEE2412C52D003DE8BC /* AsyncCachedImageView.swift */,
 				3E199FF02412C661003DE8BC /* StoryTableViewCell.swift */,
 				3E199FF22412CF07003DE8BC /* WebViewController.swift */,
-				3E199FF424140E0F003DE8BC /* Menu */,
-				3E199FEE2412C52D003DE8BC /* AsyncCachedImageView.swift */,
 				4EA6A0822410BB710063C21B /* Model.swift */,
+				3E95606C243A466A00EF60D9 /* Network.swift */,
+				3E199FF424140E0F003DE8BC /* Menu */,
 				4EA6A0742410BB390063C21B /* Main.storyboard */,
 				4EA6A0772410BB3B0063C21B /* Assets.xcassets */,
 				4EA6A0792410BB3B0063C21B /* LaunchScreen.storyboard */,
 				4EA6A07C2410BB3B0063C21B /* Info.plist */,
-				3E95606C243A466A00EF60D9 /* Network.swift */,
 			);
 			path = NewsTest;
 			sourceTree = "<group>";
