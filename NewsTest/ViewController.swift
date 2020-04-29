@@ -49,7 +49,7 @@ extension ViewController {
     fileprivate func setHeadlineCategory() {
         buildTitle(self.currentCategory.rawValue, enabled: true)    // set title and build drop-down menu
 
-        fetchNetworkData(category: self.currentCategory, myType: NewsStories.self) { [weak self] topStories in
+        NetworkData.fetch(category: self.currentCategory, myType: NewsStories.self) { [weak self] topStories in
             if let self = self {
                 if topStories.stories != nil {
                     self.headlines = topStories.stories!
