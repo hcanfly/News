@@ -1,5 +1,5 @@
 //
-//  Network.swift
+//  NetworkData.swift
 //  NewsTest
 //
 //  Created by Gary on 4/5/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-let newsapiAPIKey = "65bbe17046734447a60a328d439aa0ac"     // "<your newsapi API key goes here>"
+let newsapiAPIKey = "<your newsapi API key goes here>"     // "<your newsapi API key goes here>"
 
 let topHeadlinesRequestURLString = "http://newsapi.org/v2/top-headlines?country=us&apiKey=\(newsapiAPIKey)"
 let techHeadlinesRequestURLString = "http://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=\(newsapiAPIKey)"
@@ -51,7 +51,7 @@ enum NetworkData {
 
     static func fetch<T: Decodable>(category: HeadlineCategory, myType: T.Type, completion: @escaping (T) -> Void ) {
         guard let url = headlineURL(forCategory: category) else {
-            print("Invalid URL. Did you enter your newsapi api key in Model.swift?")
+            print("Invalid URL. Did you enter your newsapi api key in NetworkData.swift?")
             return
           }
 
